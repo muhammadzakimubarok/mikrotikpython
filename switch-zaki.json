@@ -1,0 +1,41 @@
+{
+  "system": {
+    "identity": "Switch Zaki",
+    "ipAddress": "10.10.10.2",
+    "netmask": "255.255.255.248",
+    "gateway": "10.10.10.1",
+    "dns": "8.8.8.8",
+    "allowRemoteAccess": true
+  },
+  "vlans": [
+    {
+      "id": 111,
+      "name": "vlan-rpl",
+      "tagged": ["ether1"],
+      "untagged": ["ether9", "ether10", "ether11", "ether12"]
+    },
+    {
+      "id": 222,
+      "name": "vlan-tkj",
+      "tagged": ["ether1"],
+      "untagged": ["ether17", "ether18", "ether19", "ether20"]
+    },
+    {
+      "id": 99,
+      "name": "vlan-mgmt",
+      "tagged": ["ether1"],
+      "untagged": []
+    }
+  ],
+  "ports": {
+    "ether1": { "mode": "trunk", "defaultVLAN": null },
+    "ether9": { "mode": "access", "defaultVLAN": 111 },
+    "ether10": { "mode": "access", "defaultVLAN": 111 },
+    "ether11": { "mode": "access", "defaultVLAN": 111 },
+    "ether12": { "mode": "access", "defaultVLAN": 111 },
+    "ether17": { "mode": "access", "defaultVLAN": 222 },
+    "ether18": { "mode": "access", "defaultVLAN": 222 },
+    "ether19": { "mode": "access", "defaultVLAN": 222 },
+    "ether20": { "mode": "access", "defaultVLAN": 222 }
+  }
+}
